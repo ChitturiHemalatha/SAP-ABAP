@@ -1,0 +1,33 @@
+*&---------------------------------------------------------------------*
+*& Report Zhema2_CONTROL
+*&---------------------------------------------------------------------*
+*&---------------------------------------------------------------------*
+REPORT Zhema2_CONTROL.
+
+data A type i VALUE 0.
+
+DO 10 TIMES.
+  write / A.
+  A = A + 1.
+ENDDO.
+
+do.
+  if A eq 20.
+EXIT.
+ ENDIF.
+ WRITE / A.
+ A = A + 1.
+  enddo.
+ ULINE.
+  PARAMETERS B TYPE I.
+CASE B.
+  WHEN 20.
+    WRITE / B.
+  WHEN 21 .
+   WRITE / B.
+  WHEN OTHERS.
+    WRITE / B.
+ENDCASE.
+
+
+ULINE
